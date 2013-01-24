@@ -6,7 +6,7 @@ describe Place do
   it "should have a name" do
     subject.should respond_to(:name)
   end
-  it "should have a coordinates" do
+  it "should have coordinates" do
     subject.coordinates = [29,-95]
     subject.coordinates.should eq([29,-95])
   end
@@ -35,7 +35,7 @@ describe Place do
   end
 
   describe "#to_coordinates" do
-    it "should delegate to_coorinates to coordinates" do
+    it "should delegate to_coordinates to coordinates" do
       subject.stub(:coordinates) { [5,5]}
       subject.to_coordinates.should eq ([5,5])
     end

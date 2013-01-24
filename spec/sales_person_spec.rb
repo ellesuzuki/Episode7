@@ -27,4 +27,10 @@ describe SalesPerson do
     CalculatesRoute.stub(:calculate) { route_stub }
     subject.route.should eq(route_stub)
   end
+
+  it 'should let you specify starting point' do
+    city = stub
+    subject.start_city(city)
+    subject.cities.first.should eq(city)
+  end
 end
